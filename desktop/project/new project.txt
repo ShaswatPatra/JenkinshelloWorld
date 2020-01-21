@@ -1,0 +1,15 @@
+tools available for both android and ios.
+
+open source!! if paid how much??
+
+comparision betwwen all the toold to fnd the best one
+
+appium studio??
+
+for java coding which tool is best.
+
+which level report it is proving?? types 
+
+face recognisation an otp and pass code can we automate in appium??
+
+it will support with react native(appium studio).

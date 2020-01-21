@@ -1,0 +1,165 @@
+ -------22nd AUG 2019------
+
+fundamentals of web api
+1)content-negotation
+
+
+correct reason?
+1)broad range of clients
+
+
+necessity of going to web api?
+1)end user
+
+
+
+depends on client:
+human being---->web(MVC or web forms)
+application---->services
+1)progrmmable data
+
+RPC mechanism
+
+1).net remoting and RMI
+
+remoting-->only dot net to .net
+
+web services(soap)-->security problems & huge data
+even client needs proxy
+neutral to programming language
+market 30%
+end point address to client
+
+restful services
+
+http------------->
+
+anything c
+
+visible,reusable, reachable
+
+
+
+1)content-negotation
+
+
+
+1)no action methods on web-api
+2)architectual type
+
+representational state transfer
+
+mvc    -------->http----------->
+
+URI-->some resource
+
+service address
+
+
+
+URi--------------->Service Address  & Resource & Parameters
+
+
+As a consumer and producer
+
+
+HTTP Verb
+1)POST
+2)GET
+3)PUT-------->EDIT
+4)DELETE
+5)PATCH------>PARTIAL EDIT
+
+HTTP packet optional HTTP Body
+HTTP Headers---------->trivial info
+
+HTTP header-->content-negotitaion, Status Codes, 
+200--------->success
+400--------->user side failure
+500--------->server side errors
+
+
+Security--------->token
+
+HTTP Body
+1)pay load--->application related info
+2)Media Types
+3)Hypermedia(data like images
+
+we never mapped crud to verbs
+
+
+consumer only knows these
+
+ROUTE MAPPING can be done by convention or configuration
+URL--------->Routing Engine
+
+INCOMING REQUEST AND HTTP VERB
+
+CONFIGURATION
+attribute
+
+URI-------->should has only nouns
+
+consumer needs to remember only one
+where the resource created.
+
+GET/api/teams/1------------ /api/GetTeam?id=1
+POST/api/teams
+PUT/api/teams
+
+HTTp Status Code  must return Status code 201.
+
+after putting data we can delete,edit form the adress provided
+
+
+OData- OData (Open Data Protocol) is an OASIS standard that 
+defines the best practice for building and consuming RESTful APIs
+
+
+ -------23rd AUG 2019------
+      --Todays Topics--
+
+---Web Api Dispatcher
+---File-> New-> Project-> ASP.NET Web API
+---API Code walkthrough with best practices
+---Use proper HTTP status codes
+---Async ccontroller and TPL for performance
+---Web Api Versioning
+---ODATA- Querying the API
+---Nest practices in Exception HAndling
+
+*Web Api Dispatcher
+          FIrst it will go to the controller-Dispatcher will select the action methods based on the request- Parameter binding(If the method is receives any parameter it will extract the data fir action)
+
+-If any exception comes Exception filter will take care.
+-Action filter will restrict the words or from the code and restrict them.
+-Authorozation filter is for authorising the user.
+
+*File-> New-> Project-> ASP.NET Web API
+
+*
+1)Using URI we can handle versioning... In this method, Web API Uri is changed with the help of routing as  is more readable.
+
+
+*OData(Open Data)
+         Similar to SQL for DB but it is for WEB Api.
+         Provides a flexibility of creating and consuming querries REST Services.
+	Commands: $orderby
+		  $select,
+		  $skip, 
+		  $top,
+		  $expand, 
+		  $filter, 
+		  $inlinecount: for pagination
+
+Query for top 2 product:  http://services.odata.org/OData/OData.svc/category(1)/products?$top=2
+
+Add [EnableQuesry] attribute to get the API action method
+Make returned entities as AsQuaryable()
+{Quarable}[EnableQuesry]
+{GET('allproducts')}
+
+-- Comparision Opearator
+eq
+ne

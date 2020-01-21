@@ -1,0 +1,31 @@
+JENKINS:- It is the most popular open source tool for Continious integration and build automation.
+By using jenkins SW companies can accelerate SW development process.
+
+jenkins will be available for use as long as the server is running.
+to run jenkins- java -jar jenkins.war
+
+CONTINUOUS INTEGRATION: It is a development practice that requires developers to integrate code into a shared repository several times a day. 
+Each check-in is then verified by an automated build, allowing teams to detect problems early.
+
+job/project- Runnable tasksthat are configured in jenkins
+Node- Each machine that is a part of jenkins. Each node can be a master or slave.
+Executor- Thread or slot for execution of jobs. Node can have one or more executor.
+Build- Result got after execution of job.
+PlugIn- Software that extends core functionality of jenkins.
+
+*the section below the top bar of localhost is called breadcrumb section.
+
+
+New Item: to create a new job/project.
+People: Shows the list of users .
+Build historty: shows the history of build.
+Manage jenkins: used to configure of jenkins instance. 
+   System Message: Message to display for al the users while diploy. we can use html tags here.
+   Configure Global Security: Which all things users restriced to see or access.
+   
+Matrik based authorisation: only drawback is if more users are there it is time taking, so role based authorisation came into picture
+
+
+Job Chaining: It is a process to trigger build automatically one after another. to configure it we need to set in post job 
+1: Post-build Actions- Build Other projects- next job name(which you want to trigger after the job)
+2: Build Triggers - Build after other projects are built - name of the job from which you want to trigger this selected job.
